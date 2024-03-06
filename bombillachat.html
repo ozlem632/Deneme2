@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bombilla con Interruptor</title>
+  <style>
+    /* Estilos opcionales para mejorar la apariencia */
+    .container {
+      text-align: center;
+      margin-top: 50px;
+    }
+    .bulb {
+      width: 200px;
+      height: 200px;
+    }
+    .switch {
+      width: 100px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <img id="bulb" class="bulb" src="img/lightbulb-2542155_640.png" alt="Bombilla apagada">
+  <img id="switch" class="switch" src="img/encender.png" alt="Interruptor apagado" onclick="toggleBulb()">
+</div>
+
+<script>
+  var bulbOn = false;
+
+  function toggleBulb() {
+    var bulbImage = document.getElementById("bulb");
+    var switchImage = document.getElementById("switch");
+    
+    if (bulbOn) {
+      // Si la bombilla está encendida, la apagamos
+      bulbImage.src = "img/lightbulb-2542155_640.png";
+      switchImage.src = "img/encender.png";
+      bulbOn = false;
+    } else {
+      // Si la bombilla está apagada, la encendemos
+      bulbImage.src = "img/lightbulb-1926533_640.png";
+      switchImage.src = "img/apagar.png";
+      bulbOn = true;
+    }
+  }
+</script>
+
+</body>
+</html>

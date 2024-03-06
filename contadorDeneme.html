@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contador</title>
+
+
+<style>
+    #boton{border: 5px solid red; background-color: aqua;display: none; width: 100px; height: 100px}
+
+</style>
+</head>
+<body>
+    <h1>Contador</h1>
+    <p>Cada vez que pulsemos en el boton, vamos a mostrar en el un contendor el numero de pulsaciones  </p>
+    
+    <button type="button" onclick="contador()">Clic</button>
+    <div id="boton">
+    </div>   
+<script>
+    console.log('Empezamos a contador');
+    var cont=0;
+    function contador(){
+        console.log('Contfuncion contador');
+        cont=cont+1 ; 
+        console.log("cont:" + cont);
+        document.getElementById('boton').innerHTML='pulsaciones :'+ cont;
+        document.getElementById('boton').style.display='block';
+    
+    }</script>
+
+</body>
+</html>
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+
+
+#imagen {
+    max-width: 100%px;
+    height: 200px;
+  }
+</style>
+</head>
+<body>
+
+
+    <button onclick="cambiarImagen()">Cambiar Imagen</button>
+<img id="imagen" src="img/1628969065443.jpg" alt="Imagen">
+<script>
+// Arreglo de URLs de imágenes
+var imagenes = ["img/1625960524692.jpg", "img/1625960524668.jpg","img/apagar.png","img/lightbulb-1926533_640.png"];
+var indiceImagen = 0;
+
+function cambiarImagen() {
+  // Obtener el elemento de imagen
+  var imagen = document.getElementById("imagen");
+  
+  // Cambiar la imagen
+  imagen.src = imagenes[indiceImagen];
+
+  // Incrementar el índice de la imagen
+  indiceImagen++;
+  
+  // Si alcanzamos el final del arreglo, volver al principio
+  if (indiceImagen >= imagenes.length) {
+    indiceImagen = 0;
+  }
+}
+</script>
+
+</body>
+</html>
